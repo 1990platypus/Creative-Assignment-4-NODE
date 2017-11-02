@@ -5,7 +5,7 @@
 <script src="javascripts/app.js"></script>
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
   <meta charset="utf-8">
-  <title>Node api tutorial</title>
+  <title>Creating a Video Library</title>
 </head>
 <body>
 
@@ -18,16 +18,16 @@
 
   <div id='app' ng-app='app' ng-controller='mainCtrl'>
 
-    <div ng-if='!pokemon.length' class='no-pokemon center stretch'>
+    <div ng-if='!movie.length' class='no-movie center stretch'>
       <h1 class='h1'>
         Set up your endpoint at `/pokemon` to get this view working
       </h1>
     </div>
 
-    <ul ng-if='pokemon.length' class='list center stretch'>
-      <li ng-repeat='p in pokemon' class='pokemon'>
-        <h1>{{ p.name }}</h1>
-        <img class='avatar' ng-src="{{p.avatarUrl}}" />
+    <ul ng-if='movie.length' class='list center stretch'>
+      <li ng-repeat='m in movie' class='movie'>
+        <h1>{{ p.Title }}</h1>
+        <img class='Poster' ng-src="{{m.Poster}}" />
       </li>
     </ul>
 

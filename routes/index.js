@@ -210,8 +210,8 @@ router.get('/', function(req, res) {
   res.sendFile('index.html', { root: 'public' });
 });
 
-router.get('/pokemon', function(req, res) {
-  console.log("In Pokemon");
+router.get('/movie', function(req, res) {
+  console.log("In Movies");
   res.send(pokemon);
 });
 
@@ -221,8 +221,8 @@ router.get('/politics', function(req,res) {
   request(politics).pipe(res);
 });
 
-router.post('/pokemon', function(req, res) {
-    console.log("In Pokemon Post");
+router.post('/movie', function(req, res) {
+    console.log("In Movie Post");
     console.log(req.body);
     pokemon.push(req.body);
     res.end('{"success" : "Updated Successfully", "status" : 200}');
